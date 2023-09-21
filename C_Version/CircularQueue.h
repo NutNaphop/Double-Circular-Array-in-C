@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
-
 #define SIZE 5 
+
 int items[SIZE]; 
 int front = -1 , rear = -1;
 
@@ -10,6 +10,7 @@ int deQueue() ;
 int showItem() ;
 int isFull() ; 
 int isEmpty() ; 
+int isInt() ; 
 void clear() ; 
 void wait() ; 
 
@@ -70,6 +71,16 @@ int isEmpty(){
     return 0 ; 
 }
 
+int isInt(char *str){
+	while (*str) {
+        if (!isdigit(*str)) {
+            return 0; 
+        }
+        str++;
+    }
+    return 1 ; 
+}
+
 void clear(){
 	system("cls"); 
 }
@@ -77,5 +88,4 @@ void clear(){
 void wait(){
 	system("pause") ; 
 }
-
 
