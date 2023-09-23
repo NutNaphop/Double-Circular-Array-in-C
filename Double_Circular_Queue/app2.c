@@ -27,6 +27,7 @@ int main() {
         displayMenu();
         printf("Enter your choice: ");
         scanf("%s", input);
+        while (getchar() != '\n') ; // Using for get input only one word , with out whitespace        
         if (isInt(input)) {
             choice = atoi(input); 
             switch (choice) {
@@ -75,12 +76,10 @@ int main() {
                                         
             }
 			wait() ; 
-			while (getchar() != '\n') ; // Using for get input only one word , with out whitespace
 		}
         else {
             printf("Invalid input. Please enter a valid integer.\n");
 			wait() ; 
-			while (getchar() != '\n') ; // Using for get input only one word , with out whitespace
 		}
     }
 }
