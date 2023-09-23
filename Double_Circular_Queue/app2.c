@@ -72,14 +72,16 @@ int main() {
                 default:
                     printf("Invalid choice. Please try again.\n");
                     break;
+                                        
             }
 			wait() ; 
-			clear() ;
-        } 
+			while (getchar() != '\n') ; // Using for get input only one word , with out whitespace
+		}
         else {
             printf("Invalid input. Please enter a valid integer.\n");
 			wait() ; 
-			clear() ; 
-        }
+			while (getchar() != '\n') ; // Using for get input only one word , with out whitespace
+		}
     }
 }
+
