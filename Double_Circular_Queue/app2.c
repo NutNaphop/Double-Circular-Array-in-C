@@ -57,8 +57,8 @@ int main() {
                     break; 
                     
                 case 5:
-                	displayItem() ;
-                    showItem();
+                	displayItem() ; 
+                	showItem() ; 
                     break;      
                 case 6:
                 	displayEXIT() ;

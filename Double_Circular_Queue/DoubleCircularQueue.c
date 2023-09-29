@@ -28,6 +28,7 @@ int enQueueFront(int data) {
     }
     items[front] = data;
     printf("Enqueued %d at the front. Enqueue Front Complete.\n", items[front]);
+    showItem() ; 
 }
 
 int enQueueRear(int data) {
@@ -44,6 +45,7 @@ int enQueueRear(int data) {
     }
     items[rear] = data;
     printf("Enqueued %d at the rear. Enqueue Complete.\n", items[rear]);
+    showItem() ; 
 }
 
 int deQueueFront() {
@@ -59,6 +61,7 @@ int deQueueFront() {
     else {
         front = (front + 1) % SIZE;
     }
+    showItem() ; 
 }
 
 int deQueueRear() {
@@ -74,6 +77,7 @@ int deQueueRear() {
     else {
         rear = (rear - 1 + SIZE) % SIZE;
     }
+    showItem() ; 
 }
 
 int showItem() {
