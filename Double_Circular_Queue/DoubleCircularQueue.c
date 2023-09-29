@@ -9,7 +9,7 @@ int enQueueFront(int data);
 int enQueueRear(int data); 
 int deQueueFront();
 int deQueueRear();  
-int showItem();
+void showItem();
 int isFull();
 int isEmpty();
 
@@ -80,17 +80,23 @@ int deQueueRear() {
     showItem() ; 
 }
 
-int showItem() {
-    if (isEmpty()) {
+void showItem() {
+	printf("*************************************************************\n");
+	printf("Front -> %d\n", front);
+    
+	if (isEmpty()) {
         printf("Queue is empty. Nothing to display.\n");
-        return 0; 
     }
-    printf("Front -> %d\n", front);
-    for (int i = front; i != rear; i = (i + 1) % SIZE) {
-        printf("%d ", items[i]);
-    }
-    printf("%d\nRear -> %d\n", items[rear], rear);
-    return 0; 
+    
+	else {
+    	printf("\n") ; 
+    	for (int i = front; i != rear; i = (i + 1) % SIZE) {
+        	printf("%d ->", items[i]);
+    	}	
+	}
+	
+	printf("%d\n\nRear -> %d\n", items[rear], rear);
+    printf("*************************************************************\n"); 
 }
 
 int isFull() {
