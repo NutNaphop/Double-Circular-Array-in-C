@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int isInt(char *str);
 void clear();
 void wait();
 int isInt(char *str) ; 

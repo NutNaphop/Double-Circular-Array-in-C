@@ -5,6 +5,7 @@
 int items[SIZE]; 
 int front = -1, rear = -1;
 
+// Function 
 int enQueueFront(int data); 
 int enQueueRear(int data); 
 int deQueueFront();
@@ -93,9 +94,9 @@ void showItem() {
     	for (int i = front; i != rear; i = (i + 1) % SIZE) {
         	printf("%d ->", items[i]);
     	}	
+    	printf("%d" , items[rear]) ;
 	}
-	
-	printf("%d\n\nRear -> %d\n", items[rear], rear);
+	printf("\n\nRear -> %d\n", rear);
     printf("*************************************************************\n"); 
 }
 

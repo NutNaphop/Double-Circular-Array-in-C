@@ -6,9 +6,8 @@
 #include "System.c"
 
 int isRunning = 1; 
-int choice; 
 int val; 
-char input[20]; 
+char input[2]; 
 
 int main() {
     while (isRunning) {
@@ -19,9 +18,8 @@ int main() {
         while (getchar() != '\n') ; // Using for get input only one word , with out whitespace  
 		clear() ;       
         if (isInt(input)) {
-            choice = atoi(input); 
-            switch (choice) {
-                case 1:
+            switch (input[0]) {
+                case '1' : 
                 	displayEF() ; 
                     printf("Enter the number you want to enqueue at the front: ");
                     scanf("%s", input); 
@@ -33,7 +31,7 @@ int main() {
                         printf("Invalid input. Please enter a valid integer.\n");
                     }
                     break;
-                case 2: 
+                case '2': 
                 	displayER() ;
                     printf("Enter the number you want to enqueue at the rear: ");
                     scanf("%s", input); 
@@ -45,22 +43,21 @@ int main() {
                         printf("Invalid input. Please enter a valid integer.\n");
                     }
                     break;
-                    
-                case 3:
+                case '3':
                 	displayDF() ; 
                     deQueueFront();
                     break;
                     
-                case 4: 
+                case '4': 
                 	displayDR() ;
                     deQueueRear();  
                     break; 
                     
-                case 5:
+                case '5':
                 	displayItem() ; 
                 	showItem() ; 
                     break;      
-                case 6:
+                case '6':
                 	displayEXIT() ;
                     isRunning = 0;
                     printf("Exiting the program.\n");
